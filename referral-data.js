@@ -13,6 +13,151 @@
    ========================================================= */
 
 const PRODUCTS = [
+    {
+    name: "52 Launch Podcast — Episode 1",
+    tag: "Podcast",
+    description: "Placeholder description — edit to summarize this episode.",
+    videoUrl: "https://www.youtube.com/embed/ha8UK-X-lRE?si=Hvh99CWG6_WBJ0Kt",
+    url: "",
+    cta: "Watch full episode →",
+    contactName: "",
+    contactRole: "",
+    contactEmail: "",
+    contactPhone: ""
+  },
+  {
+    name: "52 Launch Podcast — Episode 2",
+    tag: "Podcast",
+    description: "Placeholder description — edit to summarize this episode.",
+    videoUrl: "https://www.youtube.com/embed/Agb1aibfNhY?si=EdbYpQgIZ7tIPy3t",
+    url: "",
+    cta: "Watch full episode →",
+    contactName: "",
+    contactRole: "",
+    contactEmail: "",
+    contactPhone: ""
+  },
+  {
+    name: "52 Launch Podcast — Episode 3",
+    tag: "Podcast",
+    description: "Placeholder description — edit to summarize this episode.",
+    videoUrl: "https://www.youtube.com/embed/vCJ2x9nWfCI?si=ePZliah1LB-6okCc",
+    url: "",
+    cta: "Watch full episode →",
+    contactName: "",
+    contactRole: "",
+    contactEmail: "",
+    contactPhone: ""
+  },
+  {
+    name: "52 Launch Podcast — Episode 4",
+    tag: "Podcast",
+    description: "Placeholder description — edit to summarize this episode.",
+    videoUrl: "https://www.youtube.com/embed/WHpELoPF8e4?si=jnMJon3HuZgLPGEp",
+    url: "",
+    cta: "Watch full episode →",
+    contactName: "",
+    contactRole: "",
+    contactEmail: "",
+    contactPhone: ""
+  },
+  {
+    name: "52 Launch Podcast — Episode 5",
+    tag: "Podcast",
+    description: "Placeholder description — edit to summarize this episode.",
+    videoUrl: "https://www.youtube.com/embed/YxLTTM7J1YM?si=cXtVxd4qpy5o1BPd",
+    url: "",
+    cta: "Watch full episode →",
+    contactName: "",
+    contactRole: "",
+    contactEmail: "",
+    contactPhone: ""
+  },
+  {
+    name: "52 Launch Podcast — Episode 6",
+    tag: "Podcast",
+    description: "Placeholder description — edit to summarize this episode.",
+    videoUrl: "https://www.youtube.com/embed/jLl3QgKiydo?si=lHJlI5LD5lbgRy8J",
+    url: "",
+    cta: "Watch full episode →",
+    contactName: "",
+    contactRole: "",
+    contactEmail: "",
+    contactPhone: ""
+  },
+  {
+    name: "52 Launch Podcast — Episode 7",
+    tag: "Podcast",
+    description: "Placeholder description — edit to summarize this episode.",
+    videoUrl: "https://www.youtube.com/embed/3E1eep232vc?si=duviRUmpmcb17Bny",
+    url: "",
+    cta: "Watch full episode →",
+    contactName: "",
+    contactRole: "",
+    contactEmail: "",
+    contactPhone: ""
+  },
+  {
+    name: "52 Launch Podcast — Episode 8",
+    tag: "Podcast",
+    description: "Placeholder description — edit to summarize this episode.",
+    videoUrl: "https://www.youtube.com/embed/VCrKYUfXjOM?si=cHvRP21t3rzpt0dg",
+    url: "",
+    cta: "Watch full episode →",
+    contactName: "",
+    contactRole: "",
+    contactEmail: "",
+    contactPhone: ""
+  },
+  {
+    name: "52 Launch Podcast — Episode 9",
+    tag: "Podcast",
+    description: "Placeholder description — edit to summarize this episode.",
+    videoUrl: "https://www.youtube.com/embed/OJL9PuJjzY4?si=GIt5MmoYKn_Ip1-V",
+    url: "",
+    cta: "Watch full episode →",
+    contactName: "",
+    contactRole: "",
+    contactEmail: "",
+    contactPhone: ""
+  },
+  {
+    name: "52 Launch Podcast — Episode 10",
+    tag: "Podcast",
+    description: "Placeholder description — edit to summarize this episode.",
+    videoUrl: "https://www.youtube.com/embed/Tnc3A4N4CJA?si=jumjSCfVUFKHqqS8",
+    url: "",
+    cta: "Watch full episode →",
+    contactName: "",
+    contactRole: "",
+    contactEmail: "",
+    contactPhone: ""
+  },
+  {
+    name: "52 Launch Podcast — Episode 11",
+    tag: "Podcast",
+    description: "Placeholder description — edit to summarize this episode.",
+    videoUrl: "https://www.youtube.com/embed/laXcaEmcHxw?si=NkT0wNKxQiIpwwL6",
+    url: "",
+    cta: "Watch full episode →",
+    contactName: "",
+    contactRole: "",
+    contactEmail: "",
+    contactPhone: ""
+  },
+  {
+    name: "52 Launch Podcast — Episode 12",
+    tag: "Podcast",
+    description: "Placeholder description — edit to summarize this episode.",
+    videoUrl: "https://www.youtube.com/embed/qSAJL8EqyZE?si=N_AuEFz-2QSmPqHn",
+    url: "",
+    cta: "Watch full episode →",
+    contactName: "",
+    contactRole: "",
+    contactEmail: "",
+    contactPhone: ""
+  },
+
   {
     name: "Eggmazing",
     tag: "Consumer Product",
