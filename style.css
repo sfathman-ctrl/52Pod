@@ -1,24 +1,24 @@
 :root {
-  /* 52 Launch — "idea to liftoff" palette */
-  --bg-top: #071022;
-  --bg-bottom: #0d1b33;
-  --glow: rgba(255, 122, 61, 0.10);
+  /* 52 Launch — red & black */
+  --bg-top: #0a0a0a;
+  --bg-bottom: #161616;
+  --glow: rgba(224, 30, 30, 0.12);
 
-  --card-bg: #0f2038;
-  --card-bg-hover: #12294a;
-  --card-border: #1c3557;
-  --card-border-hover: #ff7a3d;
+  --card-bg: #141414;
+  --card-bg-hover: #1c1c1c;
+  --card-border: #2a2a2a;
+  --card-border-hover: #e01e1e;
 
-  --accent-1: #ff7a3d;   /* ignition orange */
-  --accent-2: #ffb347;   /* flare yellow */
+  --accent-1: #e01e1e;   /* signal red */
+  --accent-2: #ff4d4d;   /* bright red */
   --accent-grad: linear-gradient(135deg, var(--accent-1), var(--accent-2));
 
-  --text-main: #eef3f9;
-  --text-muted: #93a7c2;
+  --text-main: #f5f5f5;
+  --text-muted: #9a9a9a;
 
   --radius: 16px;
-  --shadow: 0 10px 28px rgba(0,0,0,0.45);
-  --shadow-hover: 0 14px 34px rgba(255, 122, 61, 0.25);
+  --shadow: 0 10px 28px rgba(0,0,0,0.6);
+  --shadow-hover: 0 14px 34px rgba(224, 30, 30, 0.35);
 }
 
 * { box-sizing: border-box; }
@@ -49,11 +49,11 @@ body {
 }
 
 .brand-mark {
-  color: #0b1524;
+  color: #0a0a0a;
   background: var(--accent-grad);
   border-radius: 10px;
   padding: 2px 14px;
-  box-shadow: 0 6px 18px rgba(255, 122, 61, 0.35);
+  box-shadow: 0 6px 18px rgba(224, 30, 30, 0.4);
 }
 
 .brand-name { color: var(--text-main); }
@@ -102,13 +102,13 @@ body {
 }
 
 .site-nav-link-active {
-  color: #0b1524;
+  color: #0a0a0a;
   background: var(--accent-grad);
   border-color: transparent;
 }
 
 .site-nav-link-active:hover {
-  color: #0b1524;
+  color: #0a0a0a;
 }
 
 .link-grid {
@@ -176,7 +176,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-weight: 700;
-  color: #0b1524;
+  color: #0a0a0a;
   background: var(--accent-grad);
   padding: 4px 11px;
   border-radius: 999px;
@@ -216,7 +216,7 @@ body {
 }
 
 .site-footer code {
-  background: rgba(255, 122, 61, 0.12);
+  background: rgba(224, 30, 30, 0.15);
   color: var(--accent-2);
   padding: 2px 7px;
   border-radius: 4px;
