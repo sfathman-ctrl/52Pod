@@ -19,6 +19,7 @@
    ========================================================= */
 
 const LINKS = [
+  /* ---------------- VIDEOS ---------------- */
   {
     type: "video",
     tag: "Video",
@@ -62,6 +63,155 @@ const LINKS = [
     url: "https://www.youtube.com/embed/SFrMoT2PnfQ?si=uRQUgEwmt6zC6Dil"
   },
 
+  /* ---------------- CLIENT PRODUCTS ---------------- */
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Eggmazing",
+    description: "The patented spinning Easter egg decorator that's sold over 55 million units and become a viral holiday staple.",
+    url: "https://52launch.com/eggmazing"
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Unshrinkit",
+    description: "The Shark Tank / Mark Cuban–backed formula that safely restores shrunken sweaters, hats, and clothing.",
+    url: "https://52launch.com/unshrinkit"
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Klockit Golf",
+    description: "A durable swing-training device built from a backyard prototype into a nationally featured golf product.",
+    url: "https://klockitgolf.com"
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Bigga Balls Golf",
+    description: "A golf lifestyle brand with USGA-approved balls and gear for players who don't take the game too seriously.",
+    url: "https://biggaballs.com"
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "innovo+ Challenger",
+    description: "A first-of-its-kind modular paddle board/kayak hybrid combining the stability of a hardtop with the storability of an inflatable.",
+    url: "https://innovo.plus/products/challenger"
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "GumGenii",
+    description: "A thermal-therapy tool for gum inflammation relief, developed from concept through complex health-regulatory approval.",
+    url: "https://gumgenii.com"
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Raven Grip",
+    description: "A grip-enhancing product brought to market and sold at ravengrip.com.",
+    url: "https://ravengrip.com"
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Flatstick Fauna",
+    description: "Dog-shaped golf putter covers with a built-in ball pouch and tee pouch — designed and manufactured by 52 Launch.",
+    url: ""
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Skatta Games",
+    description: "An outdoor game system featuring Skatta Bag (a cornhole twist) and Skatta Ball (a bocce twist) — designed and manufactured by 52 Launch.",
+    url: ""
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Lobster Nativity Scene",
+    description: "A novelty holiday product brought to life as part of 52 Launch's seasonal product lineup.",
+    url: ""
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Tikkun Lights",
+    description: "The 8-foot Menorah Tree — a grand new holiday centerpiece for Hanukkah, brought to market with 52 Launch.",
+    url: ""
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Flora on the Manora",
+    description: "A creative Hanukkah story and product idea turned into a market-ready festive favorite.",
+    url: ""
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Puppee",
+    description: "A practical dog care solution built to simplify daily pet parenting.",
+    url: ""
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Lava Lunch",
+    description: "Patented microwavable 'Lava Rock' heat pads, scaled from concept to Amazon and national retail sales.",
+    url: ""
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Panda Golf",
+    description: "A revolutionary swing trainer built on anatomical research and pro-level golf instruction expertise.",
+    url: ""
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Chute 21",
+    description: "A father-son invention that grew from a backyard prototype into a fully developed retail product.",
+    url: ""
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Shape Hanger",
+    description: "An innovative closet organization tool designed and manufactured into a commercial success.",
+    url: ""
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Sunshine Organic Coffee",
+    description: "An organic coffee brand built out with custom packaging design and scaled sourcing and production.",
+    url: ""
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Framing Buddy",
+    description: "An ergonomic 16\" on-center spacing tool that acts as a second hand for DIY builders framing walls.",
+    url: ""
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Shrub Shield",
+    description: "A durable landscape protection product built through careful material selection and product development.",
+    url: ""
+  },
+  {
+    type: "link",
+    tag: "Client Product",
+    title: "Handi-Bru",
+    description: "A practical coffee brewing idea turned into a commercially successful product.",
+    url: ""
+  },
+
   /* ---- Add new links below this line ---- */
 
   // Example of a plain link card (copy/paste and edit):
@@ -74,3 +224,5 @@ const LINKS = [
   //   image: "https://example.com/thumb.jpg" // optional
   // },
 ];
+
+window.LINKS = LINKS;
