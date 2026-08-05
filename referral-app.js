@@ -1,17 +1,29 @@
 /* =========================================================
-   52 LAUNCH — "WHY WORK WITH US" RENDERER
+   52 LAUNCH — "WHY US" RENDERER
    =========================================================
    Reads the PRODUCTS array from referral-data.js and builds
    cards, including an optional client contact block.
-   You should not need to edit this file — edit
-   referral-data.js instead.
+   Supports either a video embed banner (videoUrl) OR a
+   static image banner (image). You should not need to edit
+   this file — edit referral-data.js instead.
    ========================================================= */
 
 function createProductCard(item) {
   const card = document.createElement("article");
   card.className = "card";
 
-  if (item.image) {
+  if (item.videoUrl) {
+    const media = document.createElement("div");
+    media.className = "card-media";
+    const iframe = document.createElement("iframe");
+    iframe.src = item.videoUrl;
+    iframe.title = item.name || "Embedded video";
+    iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute("frameborder", "0");
+    media.appendChild(iframe);
+    card.appendChild(media);
+  } else if (item.image) {
     const media = document.createElement("div");
     media.className = "card-media";
     const img = document.createElement("img");
@@ -43,7 +55,6 @@ function createProductCard(item) {
     body.appendChild(desc);
   }
 
-  // Client contact block — only renders fields that are filled in
   const hasContact = item.contactName || item.contactRole || item.contactEmail || item.contactPhone;
   if (hasContact) {
     const contactBox = document.createElement("div");
