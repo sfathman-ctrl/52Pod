@@ -29,11 +29,40 @@ const LINKS = [
 
   // ---- Add new links below this line -------------------------------
   // {
-  //   type: "link",
-  //   tag: "Article",
-  //   title: "Example Link Title",
-  //   description: "One or two sentences describing what this is.",
-  //   url: "https://example.com",
-  //   image: "https://example.com/thumbnail.jpg"
+  //    {
+    type: "video",
+    tag: "Video",
+    title: "Video Title Here",
+    description: "Short blurb about this video.",
+    url: "https://www.youtube.com/embed/xCw4KE6EUms?si=en908-1Y56eFw_7k"
+  },
+  {
+    type: "video",
+    tag: "Video",
+    title: "Video Title Here",
+    description: "Short blurb about this video.",
+    url: "https://www.youtube.com/embed/RhgypZAN4UE?si=IFqmminPtqJKpuyw"
+  },
+  {
+    type: "video",
+    tag: "Video",
+    title: "Video Title Here",
+    description: "Short blurb about this video.",
+    url: "https://www.youtube.com/embed/3jZhdn62GMc?si=-xSTeP1N3jwanLzp"
+  },
+  {
+    type: "video",
+    tag: "Video",
+    title: "Video Title Here",
+    description: "Short blurb about this video.",
+    url: "https://www.youtube.com/embed/bjv944Cx9Rs?si=rl63Fo1Izz6v4BHt"
+  },
+  {
+    type: "video",
+    tag: "Video",
+    title: "Video Title Here",
+    description: "Short blurb about this video.",
+    url: "https://www.youtube.com/embed/SFrMoT2PnfQ?si=uRQUgEwmt6zC6Dil"
+  },
   // },
 ];
