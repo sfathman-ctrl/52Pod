@@ -1,9 +1,10 @@
 /* =========================================================
-   52 LAUNCH — REFERAL PAGE RENDERER
+   52 LAUNCH — "WHY WORK WITH US" RENDERER
    =========================================================
    Reads the PRODUCTS array from referral-data.js and builds
-   product cards. You should not need to edit this file —
-   just edit referral-data.js instead.
+   cards, including an optional client contact block.
+   You should not need to edit this file — edit
+   referral-data.js instead.
    ========================================================= */
 
 function createProductCard(item) {
@@ -12,7 +13,7 @@ function createProductCard(item) {
 
   if (item.image) {
     const media = document.createElement("div");
-    media.className = "card-media card-media-product";
+    media.className = "card-media";
     const img = document.createElement("img");
     img.src = item.image;
     img.alt = item.name || "";
@@ -32,7 +33,7 @@ function createProductCard(item) {
 
   const title = document.createElement("h3");
   title.className = "card-title";
-  title.textContent = item.name || "Untitled Product";
+  title.textContent = item.name || "Untitled";
   body.appendChild(title);
 
   if (item.description) {
@@ -42,13 +43,52 @@ function createProductCard(item) {
     body.appendChild(desc);
   }
 
+  // Client contact block — only renders fields that are filled in
+  const hasContact = item.contactName || item.contactRole || item.contactEmail || item.contactPhone;
+  if (hasContact) {
+    const contactBox = document.createElement("div");
+    contactBox.className = "card-contact";
+
+    const contactLabel = document.createElement("span");
+    contactLabel.className = "card-contact-label";
+    contactLabel.textContent = "Client Contact";
+    contactBox.appendChild(contactLabel);
+
+    if (item.contactName) {
+      const line = document.createElement("p");
+      line.className = "card-contact-line";
+      line.textContent = item.contactRole
+        ? `${item.contactName} — ${item.contactRole}`
+        : item.contactName;
+      contactBox.appendChild(line);
+    }
+
+    if (item.contactEmail) {
+      const emailLink = document.createElement("a");
+      emailLink.className = "card-contact-line card-contact-link";
+      emailLink.href = `mailto:${item.contactEmail}`;
+      emailLink.textContent = item.contactEmail;
+      contactBox.appendChild(emailLink);
+    }
+
+    if (item.contactPhone) {
+      const phoneLink = document.createElement("a");
+      phoneLink.className = "card-contact-line card-contact-link";
+      phoneLink.href = `tel:${item.contactPhone.replace(/[^0-9+]/g, "")}`;
+      phoneLink.textContent = item.contactPhone;
+      contactBox.appendChild(phoneLink);
+    }
+
+    body.appendChild(contactBox);
+  }
+
   if (item.url) {
     const link = document.createElement("a");
     link.className = "card-link";
     link.href = item.url;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.textContent = (item.cta || "View Product") + " →";
+    link.textContent = item.cta || "Learn more →";
     body.appendChild(link);
   }
 
