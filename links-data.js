@@ -24,7 +24,7 @@ const LINKS = [
     tag: "Video",
     title: "Featured Video",
     description: "Embedded straight from YouTube — swap the URL to feature a different video.",
-    url: "https://www.youtube.com/embed/8vvZedV7hQo?si=WG9lh3mSfXNSdfg6"
+    url: "https://youtu.be/bjv944Cx9Rs?si=_xxKiaU4_4u9oeFj"
   },
   {
     type: "video",
