@@ -1,64 +1,76 @@
-/**
- * 52 Launch Link Hub — renderer
- * Reads window.LINKS (defined in links-data.js) and builds one card per entry.
- * You should not need to edit this file to add links — edit links-data.js instead.
- */
+/* =========================================================
+   52 LAUNCH — LINK HUB RENDERER
+   =========================================================
+   Reads the LINKS array from links-data.js and builds cards.
+   You should not need to edit this file to add new links —
+   just edit links-data.js instead.
+   ========================================================= */
 
-function buildVideoCard(item) {
-  return `
-    <article class="card">
-      <div class="card-media">
-        <iframe
-          src="${item.url}"
-          title="${escapeHtml(item.title)}"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
-      </div>
-      <div class="card-body">
-        <span class="card-tag">${escapeHtml(item.tag || "Video")}</span>
-        <h3 class="card-title">${escapeHtml(item.title)}</h3>
-        <p class="card-desc">${escapeHtml(item.description || "")}</p>
-      </div>
-    </article>
-  `;
+function createCard(item) {
+  const card = document.createElement("article");
+  card.className = "card";
+
+  const media = document.createElement("div");
+  media.className = "card-media";
+
+  if (item.type === "video") {
+    const iframe = document.createElement("iframe");
+    iframe.src = item.url;
+    iframe.title = item.title || "Embedded video";
+    iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute("frameborder", "0");
+    media.appendChild(iframe);
+  } else if (item.image) {
+    const img = document.createElement("img");
+    img.src = item.image;
+    img.alt = item.title || "";
+    media.appendChild(img);
+  } else {
+    media.style.display = "none";
+  }
+
+  const body = document.createElement("div");
+  body.className = "card-body";
+
+  if (item.tag) {
+    const tag = document.createElement("span");
+    tag.className = "card-tag";
+    tag.textContent = item.tag;
+    body.appendChild(tag);
+  }
+
+  const title = document.createElement("h3");
+  title.className = "card-title";
+  title.textContent = item.title || "Untitled";
+  body.appendChild(title);
+
+  if (item.description) {
+    const desc = document.createElement("p");
+    desc.className = "card-desc";
+    desc.textContent = item.description;
+    body.appendChild(desc);
+  }
+
+  if (item.type === "link" && item.url) {
+    const link = document.createElement("a");
+    link.className = "card-link";
+    link.href = item.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "Open link →";
+    body.appendChild(link);
+  }
+
+  card.appendChild(media);
+  card.appendChild(body);
+  return card;
 }
 
-function buildLinkCard(item) {
-  const media = item.image
-    ? `<div class="card-media"><img src="${item.image}" alt="${escapeHtml(item.title)}" loading="lazy"></div>`
-    : "";
-
-  return `
-    <article class="card">
-      ${media}
-      <div class="card-body">
-        <span class="card-tag">${escapeHtml(item.tag || "Link")}</span>
-        <h3 class="card-title">${escapeHtml(item.title)}</h3>
-        <p class="card-desc">${escapeHtml(item.description || "")}</p>
-        <a class="card-link" href="${item.url}" target="_blank" rel="noopener">Open link →</a>
-      </div>
-    </article>
-  `;
+function renderLinks() {
+  const grid = document.getElementById("link-grid");
+  grid.innerHTML = "";
+  LINKS.forEach((item) => grid.appendChild(createCard(item)));
 }
 
-function escapeHtml(str) {
-  return String(str)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}
-
-function render() {
-  const container = document.getElementById("links-container");
-  if (!container || !Array.isArray(window.LINKS)) return;
-
-  container.innerHTML = window.LINKS
-    .map((item) => (item.type === "video" ? buildVideoCard(item) : buildLinkCard(item)))
-    .join("");
-}
-
-document.addEventListener("DOMContentLoaded", render);
+document.addEventListener("DOMContentLoaded", renderLinks);
