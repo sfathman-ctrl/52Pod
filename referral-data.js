@@ -1,8 +1,8 @@
 /* =========================================================
-   52 LAUNCH — "WHY WORK WITH US" PRODUCT DATA
+   52 LAUNCH — "WHY US" PRODUCT DATA
    =========================================================
    This is the ONLY file you need to edit to add, remove,
-   or update client products on the Why Work With Us page.
+   or update client products on the Why Us page.
 
    Each entry supports an OPTIONAL client contact block —
    leave any of contactName / contactRole / contactEmail /
@@ -13,7 +13,7 @@
    ========================================================= */
 
 const PRODUCTS = [
-    {
+  {
     name: "52 Launch Podcast — Tikkun Lights",
     tag: "Podcast",
     description: "Discover how Tikkun Lights partnered with 52 Launch to bring the 8-foot Menorah Tree to life, creating a grand new holiday centerpiece for Hanukkah.",
@@ -64,7 +64,7 @@ const PRODUCTS = [
   {
     name: "52 Launch Podcast — Panda-Golf",
     tag: "Podcast",
-    description: "In this episode, pro golfer Nick Pandelena shares how he teamed up with 52 Launch to turn his anatomical research and golf instruction expertise into Panda Golf’s revolutionary Swing Trainer",
+    description: "In this episode, pro golfer Nick Pandelena shares how he teamed up with 52 Launch to turn his anatomical research and golf instruction expertise into Panda Golf's revolutionary Swing Trainer",
     videoUrl: "https://www.youtube.com/embed/YxLTTM7J1YM?si=cXtVxd4qpy5o1BPd",
     url: "",
     cta: "Watch full episode →",
@@ -158,5 +158,20 @@ const PRODUCTS = [
     contactPhone: ""
   },
 
+  /* ---- Add new products below this line ---- */
+
+  // Example (copy/paste and edit):
+  // {
+  //   name: "New Client Product",
+  //   tag: "Category",
+  //   description: "One or two sentences about what it is.",
+  //   url: "https://example.com",
+  //   cta: "Learn more →",
+  //   contactName: "Jane Smith",
+  //   contactRole: "Founder & CEO",
+  //   contactEmail: "jane@example.com",
+  //   contactPhone: "555-123-4567"
+  // },
+];
 
 window.PRODUCTS = PRODUCTS;
