@@ -15,14 +15,7 @@
    ========================================================= */
 
 const PRODUCTS = [
-  {
-    name: "Example Client Product",
-    tag: "Client Product",
-    description: "Short description of what this client's product is and why it's worth referring.",
-    url: "https://example.com",
-    image: "", // optional — leave blank to hide the image block
-    cta: "View Product"
-  },
+
 
   /* ---- Add new products below this line ---- */
  {
