@@ -26,10 +26,7 @@ const LINKS = [
     description: "Embedded straight from YouTube — swap the URL to feature a different video.",
     url: "https://www.youtube.com/embed/8vvZedV7hQo?si=WG9lh3mSfXNSdfg6"
   },
-
-  // ---- Add new links below this line -------------------------------
-  // {
-  //    {
+  {
     type: "video",
     tag: "Video",
     title: "Video Title Here",
@@ -63,6 +60,7 @@ const LINKS = [
     title: "Video Title Here",
     description: "Short blurb about this video.",
     url: "https://www.youtube.com/embed/SFrMoT2PnfQ?si=uRQUgEwmt6zC6Dil"
-  },
+  }
+];
   // },
 ];
