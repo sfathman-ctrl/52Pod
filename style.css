@@ -76,6 +76,41 @@ body {
   background: var(--accent-grad);
 }
 
+/* ---- Nav bar (links between index.html and referal.html) ---- */
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.site-nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  transition: all 0.15s ease;
+}
+
+.site-nav-link:hover {
+  color: var(--text-main);
+  border-color: var(--accent-1);
+}
+
+.site-nav-link-active {
+  color: #0b1524;
+  background: var(--accent-grad);
+  border-color: transparent;
+}
+
+.site-nav-link-active:hover {
+  color: #0b1524;
+}
+
 .link-grid {
   max-width: 1150px;
   margin: 0 auto;
