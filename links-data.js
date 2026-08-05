@@ -20,48 +20,6 @@
 
 const LINKS = [
   /* ---------------- VIDEOS ---------------- */
-  {
-    type: "video",
-    tag: "Video",
-    title: "Featured Video",
-    description: "Original featured video for the link hub.",
-    url: "https://www.youtube.com/embed/8vvZedV7hQo?si=WG9lh3mSfXNSdfg6"
-  },
-  {
-    type: "video",
-    tag: "Video",
-    title: "Video 2",
-    description: "Short blurb about this video.",
-    url: "https://www.youtube.com/embed/xCw4KE6EUms?si=en908-1Y56eFw_7k"
-  },
-  {
-    type: "video",
-    tag: "Video",
-    title: "Video 3",
-    description: "Short blurb about this video.",
-    url: "https://www.youtube.com/embed/RhgypZAN4UE?si=IFqmminPtqJKpuyw"
-  },
-  {
-    type: "video",
-    tag: "Video",
-    title: "Video 4",
-    description: "Short blurb about this video.",
-    url: "https://www.youtube.com/embed/3jZhdn62GMc?si=-xSTeP1N3jwanLzp"
-  },
-  {
-    type: "video",
-    tag: "Video",
-    title: "Video 5",
-    description: "Short blurb about this video.",
-    url: "https://www.youtube.com/embed/bjv944Cx9Rs?si=rl63Fo1Izz6v4BHt"
-  },
-  {
-    type: "video",
-    tag: "Video",
-    title: "Video 6",
-    description: "Short blurb about this video.",
-    url: "https://www.youtube.com/embed/SFrMoT2PnfQ?si=uRQUgEwmt6zC6Dil"
-  },
 
   /* ---------------- CLIENT PRODUCTS ---------------- */
   {
