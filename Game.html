@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>52 Launch — Liftoff Run</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark">52</span>
+      <span class="brand-name">Launch<span class="brand-sub"> Liftoff Run</span></span>
+    </div>
+    <p class="tagline">Dodge the red tape. Grab the funding. Reach liftoff.</p>
+
+    <nav class="site-nav">
+      <a href="index.html" class="site-nav-link">Link Hub</a>
+      <a href="referal.html" class="site-nav-link">Why Us</a>
+      <a href="podcasts.html" class="site-nav-link">Podcasts</a>
+      <a href="attorneys.html" class="site-nav-link">Our Attorneys</a>
+      <a href="game.html" class="site-nav-link site-nav-link-active">Play</a>
+    </nav>
+  </header>
+
+  <main class="game-wrap">
+    <div class="game-hud">
+      <span>Score: <strong id="score">0</strong></span>
+      <span>Best: <strong id="best">0</strong></span>
+    </div>
+
+    <canvas id="game-canvas" width="900" height="300"></canvas>
+
+    <p class="game-instructions">
+      Press <strong>Space</strong> / <strong>Up Arrow</strong> or <strong>tap the canvas</strong> to jump.
+    </p>
+    <div id="game-overlay" class="game-overlay">
+      <button id="game-start-btn" class="game-btn">Start Game</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Powered by <strong>52 Launch</strong> · Built to move ideas forward.</p>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
