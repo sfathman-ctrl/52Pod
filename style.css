@@ -1,24 +1,21 @@
 :root {
-  /* 52 Launch — red & black */
-  --bg-top: #0a0a0a;
-  --bg-bottom: #161616;
-  --glow: rgba(224, 30, 30, 0.12);
+  /* 52 Launch — black & white, blueprint/schematic style */
+  --bg: #ffffff;
+  --ink: #0a0a0a;
+  --grid-line: rgba(10, 10, 10, 0.06);
 
-  --card-bg: #141414;
-  --card-bg-hover: #1c1c1c;
-  --card-border: #2a2a2a;
-  --card-border-hover: #e01e1e;
+  --card-bg: #ffffff;
+  --card-bg-hover: #0a0a0a;
+  --card-border: #0a0a0a;
 
-  --accent-1: #e01e1e;   /* signal red */
-  --accent-2: #ff4d4d;   /* bright red */
-  --accent-grad: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  --text-main: #0a0a0a;
+  --text-inverse: #ffffff;
+  --text-muted: #5a5a5a;
+  --text-muted-inverse: #b5b5b5;
 
-  --text-main: #f5f5f5;
-  --text-muted: #9a9a9a;
-
-  --radius: 16px;
-  --shadow: 0 10px 28px rgba(0,0,0,0.6);
-  --shadow-hover: 0 14px 34px rgba(224, 30, 30, 0.35);
+  --radius: 2px;
+  --shadow: 4px 4px 0 rgba(10, 10, 10, 0.9);
+  --shadow-hover: 8px 8px 0 rgba(10, 10, 10, 1);
 }
 
 * { box-sizing: border-box; }
@@ -28,32 +25,38 @@ body {
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--text-main);
   min-height: 100vh;
-  background:
-    radial-gradient(1200px 500px at 50% -10%, var(--glow), transparent 60%),
-    linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
-  background-attachment: fixed;
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
+/* ---- Header ---- */
 .site-header {
   text-align: center;
-  padding: 56px 20px 28px;
+  padding: 60px 20px 30px;
   position: relative;
+  border-bottom: 3px solid var(--ink);
 }
 
 .brand {
   display: inline-flex;
   align-items: baseline;
   gap: 10px;
-  font-size: 2.4rem;
-  font-weight: 800;
+  font-size: 2.6rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
 }
 
 .brand-mark {
-  color: #0a0a0a;
-  background: var(--accent-grad);
-  border-radius: 10px;
-  padding: 2px 14px;
-  box-shadow: 0 6px 18px rgba(224, 30, 30, 0.4);
+  color: var(--text-inverse);
+  background: var(--ink);
+  border-radius: 0;
+  padding: 2px 16px;
+  transform: skew(-8deg);
+  display: inline-block;
+  box-shadow: 5px 5px 0 rgba(10,10,10,0.15);
 }
 
 .brand-name { color: var(--text-main); }
@@ -61,81 +64,94 @@ body {
 
 .tagline {
   color: var(--text-muted);
-  margin-top: 10px;
+  margin-top: 12px;
   font-size: 1rem;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .site-header::after {
   content: "";
   display: block;
-  width: 90px;
-  height: 4px;
-  margin: 22px auto 0;
-  border-radius: 999px;
-  background: var(--accent-grad);
+  width: 140px;
+  height: 6px;
+  margin: 26px auto 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--ink),
+    var(--ink) 8px,
+    transparent 8px,
+    transparent 16px
+  );
 }
 
-/* ---- Nav bar (links between index.html and referal.html) ---- */
+/* ---- Nav bar ---- */
 .site-nav {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 26px;
+  gap: 0;
+  margin-top: 28px;
+  border: 2px solid var(--ink);
+  display: inline-flex;
+}
+
+.site-header .site-nav {
+  display: inline-flex;
 }
 
 .site-nav-link {
-  color: var(--text-muted);
+  color: var(--text-main);
   text-decoration: none;
-  font-weight: 700;
-  font-size: 0.9rem;
-  padding: 8px 20px;
-  border-radius: 999px;
-  border: 1px solid var(--card-border);
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 10px 26px;
   background: var(--card-bg);
+  border-right: 2px solid var(--ink);
   transition: all 0.15s ease;
 }
 
+.site-nav-link:last-child { border-right: none; }
+
 .site-nav-link:hover {
-  color: var(--text-main);
-  border-color: var(--accent-1);
+  background: var(--grid-line);
 }
 
 .site-nav-link-active {
-  color: #0a0a0a;
-  background: var(--accent-grad);
-  border-color: transparent;
+  color: var(--text-inverse);
+  background: var(--ink);
 }
 
 .site-nav-link-active:hover {
-  color: #0a0a0a;
+  background: var(--ink);
+  color: var(--text-inverse);
 }
 
+/* ---- Grid ---- */
 .link-grid {
   max-width: 1150px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 40px 24px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 26px;
+  gap: 34px;
 }
 
 .card {
   background: var(--card-bg);
-  border: 1px solid var(--card-border);
+  border: 2px solid var(--card-border);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
-  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  border-color: var(--card-border-hover);
+  transform: translate(-2px, -2px);
   box-shadow: var(--shadow-hover);
-  background: var(--card-bg-hover);
 }
 
 .card-media {
@@ -143,7 +159,7 @@ body {
   width: 100%;
   padding-top: 56.25%; /* strict 16:9 */
   background: #000;
-  border-bottom: 1px solid var(--card-border);
+  border-bottom: 2px solid var(--ink);
   overflow: hidden;
 }
 
@@ -156,35 +172,33 @@ body {
   border: 0;
   object-fit: cover;
   display: block;
-}
-
-.card:hover .card-media {
-  box-shadow: inset 0 0 0 2px var(--accent-1);
+  filter: grayscale(0.15);
 }
 
 .card-body {
-  padding: 18px 20px 22px;
+  padding: 20px 22px 24px;
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 10px;
   flex: 1;
 }
 
 .card-tag {
   align-self: flex-start;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-weight: 700;
-  color: #0a0a0a;
-  background: var(--accent-grad);
-  padding: 4px 11px;
-  border-radius: 999px;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  font-family: "Courier New", monospace;
+  color: var(--text-inverse);
+  background: var(--ink);
+  padding: 4px 10px;
+  border-radius: 0;
 }
 
 .card-title {
-  font-size: 1.12rem;
-  font-weight: 700;
+  font-size: 1.15rem;
+  font-weight: 800;
   margin: 0;
   line-height: 1.3;
 }
@@ -198,26 +212,32 @@ body {
 }
 
 .card-link {
-  color: var(--accent-2);
+  color: var(--text-main);
   text-decoration: none;
-  font-weight: 700;
-  font-size: 0.9rem;
+  font-weight: 800;
+  font-size: 0.88rem;
   margin-top: 6px;
-  transition: color 0.15s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-bottom: 2px solid var(--ink);
+  align-self: flex-start;
+  transition: opacity 0.15s ease;
 }
 
-.card-link:hover { color: var(--accent-1); text-decoration: underline; }
+.card-link:hover { opacity: 0.6; }
 
+/* ---- Footer ---- */
 .site-footer {
   text-align: center;
   color: var(--text-muted);
-  padding: 34px 20px 56px;
+  padding: 40px 20px 60px;
   font-size: 0.85rem;
+  border-top: 3px solid var(--ink);
 }
 
 .site-footer code {
-  background: rgba(224, 30, 30, 0.15);
-  color: var(--accent-2);
-  padding: 2px 7px;
-  border-radius: 4px;
+  background: var(--ink);
+  color: var(--text-inverse);
+  padding: 2px 8px;
+  font-family: "Courier New", monospace;
 }
